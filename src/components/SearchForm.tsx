@@ -48,6 +48,9 @@ export default function SearchForm({
   };
 
   const resetError = () => {
+    if (isLoading) {
+      return;
+    }
     onError(null);
   };
 
@@ -62,6 +65,7 @@ export default function SearchForm({
           onFocus={resetError}
           placeholder="BPM025415"
           className="block input input-bordered w-full"
+          disabled={isLoading}
         />
       </label>
       {error && <label className="text-error">{error}</label>}

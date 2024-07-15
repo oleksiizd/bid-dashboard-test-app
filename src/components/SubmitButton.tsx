@@ -32,12 +32,12 @@ export default function SubmitButton({ isLoading }: SubmitButtonProps) {
     );
     const timeoutStage3Id = setTimeout(
       setButtonText,
-      6000,
+      8000,
       buttonTextVariants.loadingStage3
     );
     const timeoutLongId = setTimeout(
       setButtonText,
-      9000,
+      15000,
       buttonTextVariants.loadingLong
     );
 
